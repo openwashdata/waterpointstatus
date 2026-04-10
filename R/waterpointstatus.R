@@ -1,0 +1,53 @@
+#' Water Point Functionality and Service Delivery Monitoring Dataset - 2023
+#'
+#' This dataset contains structured field survey responses collected from water point inspections and interviews with community members or water point committee representatives. Each record represents a single survey event linked to a specific water point, including GPS coordinates, enumerator metadata, timestamps, and detailed observations on infrastructure condition, functionality, water availability, maintenance practices, and governance arrangements.
+#'
+#' @format A tibble with 1425 rows and 45 variables
+#' \describe{
+#'   \item{waterpoint_id}{Unique identifier assigned to each water point.}
+#'   \item{latitude}{Geographic latitude of the water point}
+#'   \item{longitude}{Geographic longitude of the water point}
+#'   \item{waterpoint_image}{File name or reference to image captured during the survey visit.}
+#'   \item{functional_status}{Operational status of the water point at time of visit}
+#'   \item{downtime_duration}{Reported length of time the water point has been non-functional or abandoned.}
+#'   \item{abandon_reason}{Primary reason the water point was abandoned or left non-functional.}
+#'   \item{has_current_issue}{Indicates whether any current technical or operational problem was observed.}
+#'   \item{current_issue}{Type of current problem affecting the water point.}
+#'   \item{water_available_today}{Indicates whether water was available on the day of the visit.}
+#'   \item{continuous_30days}{Indicates whether the water point provided uninterrupted water supply over the past 30 days.}
+#'   \item{no_water_30days_reason}{Reason for water interruptions within the last 30 days.}
+#'   \item{repair_duration_days}{Number of days taken to repair the water point after the most recent breakdown}
+#'   \item{seasonal_unavailable}{Indicates whether the water source becomes unavailable during certain seasons.}
+#'   \item{seasonal_period}{Time of year when water is typically unavailable due to seasonal variation.}
+#'   \item{flow_test_possible}{Indicates whether a flow rate test could be conducted during the visit.}
+#'   \item{fill_time_20l}{Time required to fill a 20-litre container during flow rate test.}
+#'   \item{latrine_within_100m}{Indicates presence of a latrine within 100 metres of the water point.}
+#'   \item{observed_issues}{General technical or structural problems observed during the visit, multiple responses possible}
+#'   \item{water_quality_issues}{Observed or reported water quality concerns}
+#'   \item{preventive_maintenance}{Indicates whether routine preventative maintenance is performed on the water point.}
+#'   \item{maintenance_barrier}{Main reason preventing regular preventative maintenance.}
+#'   \item{user_population}{Estimated number of people regularly using the water point.}
+#'   \item{universal_access}{Indicates whether all community members have access to the water point.}
+#'   \item{households_no_access}{Estimated number of households without access to the water point.}
+#'   \item{access_barrier}{Primary reason some households lack access to the water point.}
+#'   \item{max_roundtrip_minutes}{Maximum reported round-trip time in minutes to collect water.}
+#'   \item{max_distance_metres}{Maximum reported one-way walking distance to the water point.}
+#'   \item{has_service_provider}{Indicates whether a designated service provider or operator is responsible for the water point.}
+#'   \item{provider_type}{Type of service provider responsible for operation and maintenance }
+#'   \item{has_tariff}{Indicates whether users pay a tariff or fee for water access.}
+#'   \item{tariff_frequency}{Frequency at which the water tariff or user fee is collected.}
+#'   \item{tariff_amount_mwk}{Amount charged per tariff period in Malawi Kwacha}
+#'   \item{tariff_cost_basis}{Cost factors considered when setting the water tariff}
+#'   \item{has_financial_records}{Indicates whether financial records or books are maintained for the water point.}
+#'   \item{has_positive_balance}{Indicates whether financial records show a positive account balance.}
+#'   \item{savings_or_loans}{Indicates evidence of savings accumulation or loan repayment in financial records.}
+#'   \item{record_balance_mwk}{Reported balance recorded in financial books}
+#'   \item{has_bank_account}{Indicates whether the service provider maintains a formal bank account.}
+#'   \item{bank_balance_mwk}{Reported balance held in the bank account}
+#'   \item{committee_year_formed}{Year the water point committee was established.}
+#'   \item{committee_member_count}{Total number of members serving on the water point committee.}
+#'   \item{committee_women_count}{Number of women serving on the water point committee.}
+#'   \item{treasurer_gender}{Gender of the committee treasurer.}
+#'   \item{months_unavailable}{Total number of months per year the water source is unavailable.}
+#' }
+"waterpointstatus"

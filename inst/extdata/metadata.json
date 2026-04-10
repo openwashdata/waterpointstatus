@@ -1,0 +1,36 @@
+{
+  "@context": "https://openwashdata.org/",
+  "@type": "Dataset",
+  "name": "waterpointstatus",
+  "description": "What the package does (one paragraph).",
+  "publisher": {
+    "@type": "Organization",
+    "name": "openwashdata @ Global Health Engineering, ETH Zurich",
+    "url": "https://openwashdata.org/"
+  },
+  "datePublished": "2026-04-10",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "keywords": null,
+  "distribution": {
+    "@type": "DataDownload",
+    "url": "https://raw.githubusercontent.com/openwashdata/waterpointstatus/main/inst/extdata/waterpointstatus.csv",
+    "contentUrl": "https://raw.githubusercontent.com/openwashdata/waterpointstatus/main/inst/extdata/waterpointstatus.csv",
+    "encodingFormat": "text/csv"
+  },
+  "encodingFormat": "CSV",
+  "version": "1.0",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": null
+  },
+  "temporalCoverage": {
+    "@type": "DateTime",
+    "startDate": null,
+    "endDate": null
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Emmanuel Mhango",
+    "email": "emmanuellmhango@gmail.com"
+  }
+}

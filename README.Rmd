@@ -1,0 +1,245 @@
+---
+output: github_document
+always_allow_html: true
+editor_options: 
+  markdown: 
+    wrap: 72
+  chunk_output_type: console
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%",
+  message = FALSE,
+  warning = FALSE,
+  fig.retina = 2,
+  fig.align = 'center'
+)
+```
+
+# Water Point Functionality and Service Delivery Monitoring Dataset - 2023
+
+<!-- badges: start -->
+
+[![License: CC BY
+4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+<!-- badges: end -->
+
+This dataset contains water point assessment data collected during
+routine field monitoring activities conducted in Malawi in 2023 under
+the Trocaire water point functionality survey program. The survey was
+designed to evaluate the operational status, service reliability, and
+management conditions of rural water supply infrastructure, with a focus
+on boreholes and community-managed water points.
+
+Data collection was carried out using the mWater platform. The dataset
+includes geospatial coordinates, functionality status, water
+availability and reliability indicators, pump and civil works condition,
+reported mechanical failures, seasonal variability, water quality
+observations (including salinity and contamination issues), and basic
+performance metrics such as collection time and access distance.
+
+The dataset also captures governance and service delivery information,
+including water point committee composition, tariff structures,
+financial record keeping, maintenance practices, and service provider
+arrangements.
+
+The survey was conducted across multiple rural water points in Malawi,
+with locations determined by program implementation and field
+accessibility.
+
+This dataset can be used for:
+
+1.  Rural water infrastructure functionality analysis
+
+2.  Borehole and handpump performance monitoring
+
+3.  WASH program evaluation and reporting
+
+4.  Geospatial mapping of service delivery gaps
+
+5.  Water quality risk screening (e.g., salinity and contamination
+    indicators)
+
+6.  Governance and sustainability assessments of community-managed water
+    systems
+
+## Installation
+
+You can install the development version of waterpointstatus from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("openwashdata/waterpointstatus")
+```
+
+```{r}
+## Run the following code in console if you don't have the packages
+## install.packages(c("dplyr", "knitr", "readr", "stringr", "gt", "kableExtra"))
+library(dplyr)
+library(knitr)
+library(readr)
+library(stringr)
+library(gt)
+library(kableExtra)
+```
+
+Alternatively, you can download the individual datasets as a CSV or XLSX
+file from the table below.
+
+1.  Click Download CSV. A window opens that displays the CSV in your
+    browser.
+2.  Right-click anywhere inside the window and select "Save Page As...".
+3.  Save the file in a folder of your choice.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+extdata_path <- "https://github.com/openwashdata/waterpointstatus/raw/main/inst/extdata/"
+
+read_csv("data-raw/dictionary.csv") |> 
+  distinct(file_name) |> 
+  dplyr::mutate(file_name = str_remove(file_name, ".rda")) |> 
+  dplyr::rename(dataset = file_name) |> 
+  mutate(
+    CSV = paste0("[Download CSV](", extdata_path, dataset, ".csv)"),
+    XLSX = paste0("[Download XLSX](", extdata_path, dataset, ".xlsx)")
+  ) |> 
+  knitr::kable()
+
+```
+
+## Data
+
+The package provides access to water point assessment data collected during routine field monitoring activities conducted in Malawi in 2023 under the Trocaire water point functionality survey program. The survey was designed to evaluate the operational status, service reliability, and management conditions of rural water supply infrastructure, with a focus on boreholes and community-managed water points.
+
+```{r}
+library(waterpointstatus)
+```
+
+### metadata
+
+The dataset `waterpointstatus` contains `r nrow(waterpointstatus)`
+observations and `r ncol(waterpointstatus)` variables
+
+```{r}
+waterpointstatus |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+For an overview of the variable names, see the following table.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+readr::read_csv("data-raw/dictionary.csv") |>
+  dplyr::filter(file_name == "waterpointstatus.rda") |>
+  dplyr::select(variable_name:description) |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling("striped") |> 
+  kableExtra::scroll_box(height = "200px")
+```
+
+## Example
+
+```{r}
+library(waterpointstatus)
+
+# Example 1: Visualization Map on water point status
+library(leaflet)
+library(dplyr)
+library(stringr)
+
+# -----------------------------
+# 1. Data preparation
+# -----------------------------
+wp_map <- waterpointstatus %>%
+  mutate(
+    latitude = as.numeric(latitude),
+    longitude = as.numeric(longitude),
+
+    # Clean functional status (real-world messy labels handled)
+    functional_status = case_when(
+      str_detect(tolower(functional_status), "functional") &
+        !str_detect(tolower(functional_status), "not|non") ~ "Functional",
+
+      str_detect(tolower(functional_status), "not|non") ~ "Non-functional",
+
+      TRUE ~ "Unknown / Partial"
+    ),
+
+    # Population
+    user_population = as.numeric(user_population),
+
+    # Scale for visualization
+    pop_scaled = sqrt(user_population)
+  ) %>%
+  filter(!is.na(latitude), !is.na(longitude))
+
+# -----------------------------
+# 2. Color palette
+# -----------------------------
+status_palette <- colorFactor(
+  palette = c(
+    "Functional" = "green",
+    "Non-functional" = "red",
+    "Unknown / Partial" = "orange"
+  ),
+  domain = wp_map$functional_status
+)
+
+# -----------------------------
+# 3. Leaflet map
+# -----------------------------
+leaflet(wp_map) %>%
+  addProviderTiles(providers$OpenStreetMap) %>%
+
+  addCircleMarkers(
+    lng = ~longitude,
+    lat = ~latitude,
+
+    color = ~status_palette(functional_status),
+    fillColor = ~status_palette(functional_status),
+
+    fillOpacity = 0.75,
+    stroke = TRUE,
+    weight = 1,
+
+    radius = ~ifelse(is.na(pop_scaled), 4, pop_scaled / 6),
+
+    popup = ~paste0(
+      "<b>Water Point ID:</b> ", waterpoint_id, "<br>",
+      "<b>Status:</b> ", functional_status, "<br>",
+      "<b>User population:</b> ", ifelse(is.na(user_population), "NA", user_population), "<br>",
+      "<b>Fill time (20L):</b> ", ifelse(is.na(fill_time_20l), "NA", fill_time_20l), "<br>",
+      "<b>Repair days:</b> ", ifelse(is.na(repair_duration_days), "NA", repair_duration_days), "<br>",
+      "<b>Latrine within 100m:</b> ", latrine_within_100m
+    )
+  ) %>%
+
+  addLegend(
+    position = "bottomright",
+    pal = status_palette,
+    values = ~functional_status,
+    title = "Water Point Status"
+  )
+```
+
+## License
+
+Data are available as
+[CC-BY](https://github.com/openwashdata/%7B%7B%7Bpackagename%7D%7D%7D/blob/main/LICENSE.md).
+
+## Citation
+
+Please cite this package using:
+
+```{r}
+citation("waterpointstatus")
+```
