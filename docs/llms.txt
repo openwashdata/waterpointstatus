@@ -1,5 +1,7 @@
 # Water Point Functionality and Service Delivery Monitoring Dataset - 2023
 
+[![DOI](https://zenodo.org/badge/1206929194.svg)](https://doi.org/10.5281/zenodo.19498016)
+
 This dataset contains water point assessment data collected during
 routine field monitoring activities conducted in Malawi in 2023 under
 the Trocaire water point functionality survey program. The survey was

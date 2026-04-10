@@ -1,6 +1,6 @@
 Package: waterpointstatus
 Title: Water Point Functionality and Service Delivery Monitoring Dataset - 2023
-Version: 0.0.0.9000
+Version: v1.0.0
 Authors@R: c(
     person("Emmanuel", "Mhango", , "emmanuellmhango@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-3197-6244")),

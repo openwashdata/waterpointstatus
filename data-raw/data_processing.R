@@ -68,11 +68,6 @@ check_utf8(data_in)
 
 waterpointstatus <- data_in
 
-# ============================================================
-#example code
-
-# ====================================================
-
 # Export Data ------------------------------------------------------------------
 usethis::use_data(waterpointstatus, overwrite = TRUE)
 fs::dir_create(here::here("inst", "extdata"))

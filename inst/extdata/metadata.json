@@ -2,7 +2,7 @@
   "@context": "https://openwashdata.org/",
   "@type": "Dataset",
   "name": "waterpointstatus",
-  "description": "What the package does (one paragraph).",
+  "description": "This dataset contains structured field survey responses collected from water point inspections and interviews with community members or water point committee representatives. Each record represents a single survey event linked to a specific water point, including GPS coordinates, enumerator metadata, timestamps, and detailed observations on infrastructure condition, functionality, water availability, maintenance practices, and governance arrangements.",
   "publisher": {
     "@type": "Organization",
     "name": "openwashdata @ Global Health Engineering, ETH Zurich",
