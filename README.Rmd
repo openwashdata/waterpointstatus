@@ -139,7 +139,7 @@ For an overview of the variable names, see the following table.
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 readr::read_csv("data-raw/dictionary.csv") |>
-  dplyr::filter(file_name == "metadata.rda") |>
+  dplyr::filter(file_name == "waterpointstatus.rda") |>
   dplyr::select(variable_name:description) |> 
   knitr::kable() |> 
   kableExtra::kable_styling("striped") |> 

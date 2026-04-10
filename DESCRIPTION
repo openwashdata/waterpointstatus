@@ -1,5 +1,5 @@
 Package: waterpointstatus
-Title: What the Package Does (One Line, Title Case)
+Title: Water Point Functionality and Service Delivery Monitoring Dataset - 2023
 Version: 0.0.0.9000
 Authors@R: c(
     person("Emmanuel", "Mhango", , "emmanuellmhango@gmail.com", role = c("aut", "cre"),
@@ -17,7 +17,7 @@ Authors@R: c(
     person("Emmanuel", "Nkhonjera", role = "ctb"),
     person("Rodney", "Kananji", role = "ctb")
   )
-Description: What the package does (one paragraph).
+Description: This dataset contains structured field survey responses collected from water point inspections and interviews with community members or water point committee representatives. Each record represents a single survey event linked to a specific water point, including GPS coordinates, enumerator metadata, timestamps, and detailed observations on infrastructure condition, functionality, water availability, maintenance practices, and governance arrangements.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
