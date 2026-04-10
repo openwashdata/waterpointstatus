@@ -1,0 +1,3 @@
+fileName,name,contentUrl,encodingFormat
+waterpointstatus.csv,waterpointstatus,https://raw.githubusercontent.com/openwashdata/waterpointstatus/main/inst/extdata/waterpointstatus.csv,csv
+waterpointstatus.xlsx,waterpointstatus,https://raw.githubusercontent.com/openwashdata/waterpointstatus/main/inst/extdata/waterpointstatus.xlsx,ooxml

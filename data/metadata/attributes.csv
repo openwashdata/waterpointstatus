@@ -1,0 +1,46 @@
+directory,file_name,variable_name,variable_type,description
+data/,waterpointstatus.rda,waterpoint_id,numeric,Unique identifier assigned to each water point.
+data/,waterpointstatus.rda,latitude,numeric,Geographic latitude of the water point
+data/,waterpointstatus.rda,longitude,numeric,Geographic longitude of the water point
+data/,waterpointstatus.rda,waterpoint_image,character,File name or reference to image captured during the survey visit.
+data/,waterpointstatus.rda,functional_status,character,Operational status of the water point at time of visit
+data/,waterpointstatus.rda,downtime_duration,character,Reported length of time the water point has been non-functional or abandoned.
+data/,waterpointstatus.rda,abandon_reason,character,Primary reason the water point was abandoned or left non-functional.
+data/,waterpointstatus.rda,has_current_issue,character,Indicates whether any current technical or operational problem was observed.
+data/,waterpointstatus.rda,current_issue,character,Type of current problem affecting the water point.
+data/,waterpointstatus.rda,water_available_today,character,Indicates whether water was available on the day of the visit.
+data/,waterpointstatus.rda,continuous_30days,character,Indicates whether the water point provided uninterrupted water supply over the past 30 days.
+data/,waterpointstatus.rda,no_water_30days_reason,character,Reason for water interruptions within the last 30 days.
+data/,waterpointstatus.rda,repair_duration_days,numeric,Number of days taken to repair the water point after the most recent breakdown
+data/,waterpointstatus.rda,seasonal_unavailable,character,Indicates whether the water source becomes unavailable during certain seasons.
+data/,waterpointstatus.rda,seasonal_period,character,Time of year when water is typically unavailable due to seasonal variation.
+data/,waterpointstatus.rda,flow_test_possible,character,Indicates whether a flow rate test could be conducted during the visit.
+data/,waterpointstatus.rda,fill_time_20l,numeric,Time required to fill a 20-litre container during flow rate test.
+data/,waterpointstatus.rda,latrine_within_100m,character,Indicates presence of a latrine within 100 metres of the water point.
+data/,waterpointstatus.rda,observed_issues,character,"General technical or structural problems observed during the visit, multiple responses possible"
+data/,waterpointstatus.rda,water_quality_issues,character,Observed or reported water quality concerns
+data/,waterpointstatus.rda,preventive_maintenance,character,Indicates whether routine preventative maintenance is performed on the water point.
+data/,waterpointstatus.rda,maintenance_barrier,character,Main reason preventing regular preventative maintenance.
+data/,waterpointstatus.rda,user_population,numeric,Estimated number of people regularly using the water point.
+data/,waterpointstatus.rda,universal_access,character,Indicates whether all community members have access to the water point.
+data/,waterpointstatus.rda,households_no_access,numeric,Estimated number of households without access to the water point.
+data/,waterpointstatus.rda,access_barrier,character,Primary reason some households lack access to the water point.
+data/,waterpointstatus.rda,max_roundtrip_minutes,numeric,Maximum reported round-trip time in minutes to collect water.
+data/,waterpointstatus.rda,max_distance_metres,numeric,Maximum reported one-way walking distance to the water point.
+data/,waterpointstatus.rda,has_service_provider,character,Indicates whether a designated service provider or operator is responsible for the water point.
+data/,waterpointstatus.rda,provider_type,character,Type of service provider responsible for operation and maintenance
+data/,waterpointstatus.rda,has_tariff,character,Indicates whether users pay a tariff or fee for water access.
+data/,waterpointstatus.rda,tariff_frequency,character,Frequency at which the water tariff or user fee is collected.
+data/,waterpointstatus.rda,tariff_amount_mwk,numeric,Amount charged per tariff period in Malawi Kwacha
+data/,waterpointstatus.rda,tariff_cost_basis,character,Cost factors considered when setting the water tariff
+data/,waterpointstatus.rda,has_financial_records,character,Indicates whether financial records or books are maintained for the water point.
+data/,waterpointstatus.rda,has_positive_balance,character,Indicates whether financial records show a positive account balance.
+data/,waterpointstatus.rda,savings_or_loans,character,Indicates evidence of savings accumulation or loan repayment in financial records.
+data/,waterpointstatus.rda,record_balance_mwk,numeric,Reported balance recorded in financial books
+data/,waterpointstatus.rda,has_bank_account,character,Indicates whether the service provider maintains a formal bank account.
+data/,waterpointstatus.rda,bank_balance_mwk,numeric,Reported balance held in the bank account
+data/,waterpointstatus.rda,committee_year_formed,numeric,Year the water point committee was established.
+data/,waterpointstatus.rda,committee_member_count,numeric,Total number of members serving on the water point committee.
+data/,waterpointstatus.rda,committee_women_count,numeric,Number of women serving on the water point committee.
+data/,waterpointstatus.rda,treasurer_gender,character,Gender of the committee treasurer.
+data/,waterpointstatus.rda,months_unavailable,numeric,Total number of months per year the water source is unavailable.

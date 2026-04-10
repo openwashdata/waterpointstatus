@@ -1,14 +1,32 @@
 Package: waterpointstatus
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
-Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
+Authors@R: c(
+    person("Emmanuel", "Mhango", , "emmanuellmhango@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-3197-6244")),
+    person("Emmanuel", "Kamanga", role = "ctb"),
+    person("Soldier", "Zammimba", role = "ctb"),
+    person("Lackson", "Ngasale", role = "ctb"),
+    person("Dickson", "Chitonya", role = "ctb"),
+    person("Joseph", "Chilembwe", role = "ctb"),
+    person("Phillip", "Kamanga", role = "ctb"),
+    person("Alex", "Makwinja", role = "ctb"),
+    person("Michael", "Kwenda", role = "ctb"),
+    person("Maureen", "Nyadani", role = "ctb"),
+    person("Dickson", "Daudi", role = "ctb"),
+    person("Emmanuel", "Nkhonjera", role = "ctb"),
+    person("Rodney", "Kananji", role = "ctb")
+  )
 Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Depends: 
     R (>= 3.5)
 LazyData: true
+Language: en-GB
+Config/Needs/website: rmarkdown
+Date: 2026-04-10
+URL: https://github.com/openwashdata/waterpointstatus
+BugReports: https://github.com/openwashdata/waterpointstatus/issues
