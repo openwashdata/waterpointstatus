@@ -1,5 +1,4 @@
-
-url: https://github.com/openwashdata/waterpointstatus
+url: https://openwashdata.github.io/waterpointstatus/
 template:
   bootstrap: 5
   includes:
