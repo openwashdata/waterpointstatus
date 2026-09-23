@@ -1,0 +1,46 @@
+# ------------------------------------------------
+# CITATION.cff file created with {cffr} R package
+# See also: https://docs.ropensci.org/cffr/
+# ------------------------------------------------
+ 
+cff-version: 1.2.0
+message: 'To cite package "waterpointstatus" in publications use:'
+type: dataset
+license: CC-BY-4.0
+title: 'waterpointstatus: Water Point Functionality and Service Delivery Monitoring
+  Dataset - 2023'
+version: 1.0.0
+doi: 10.5281/zenodo.19498016
+abstract: This dataset contains structured field survey responses collected from water
+  point inspections and interviews with community members or water point committee
+  representatives. Each record represents a single survey event linked to a specific
+  water point, including GPS coordinates, enumerator metadata, timestamps, and detailed
+  observations on infrastructure condition, functionality, water availability, maintenance
+  practices, and governance arrangements.
+authors:
+- family-names: Mhango
+  given-names: Emmanuel
+  email: emmanuellmhango@gmail.com
+  orcid: https://orcid.org/0000-0003-3197-6244
+repository-code: https://github.com/openwashdata/waterpointstatus
+url: https://github.com/openwashdata/waterpointstatus
+date-released: '2026-04-10'
+contact:
+- family-names: Mhango
+  given-names: Emmanuel
+  email: emmanuellmhango@gmail.com
+  orcid: https://orcid.org/0000-0003-3197-6244
+keywords:
+- open data
+- washdata
+- water points
+- functionality
+- water supply
+- service delivery
+- Malawi
+- baseflow
+- boreholes
+- groundwater
+- wash
+- waterpoints
+
