@@ -3,7 +3,7 @@
 \docType{data}
 \name{waterpointstatus}
 \alias{waterpointstatus}
-\title{Water Point Functionality and Service Delivery Monitoring Dataset - 2023}
+\title{Water Point Functionality and Service Monitoring, Malawi 2023}
 \format{
 A tibble with 1425 rows and 45 variables
 \describe{
@@ -58,6 +58,6 @@ A tibble with 1425 rows and 45 variables
 waterpointstatus
 }
 \description{
-This dataset contains structured field survey responses collected from water point inspections and interviews with community members or water point committee representatives. Each record represents a single survey event linked to a specific water point, including GPS coordinates, enumerator metadata, timestamps, and detailed observations on infrastructure condition, functionality, water availability, maintenance practices, and governance arrangements.
+This dataset contains structured field survey responses collected from water point inspections and interviews with community members or water point committee representatives. Each record represents a single survey event linked to a specific water point, including GPS coordinates and detailed observations on infrastructure condition, functionality, water availability, maintenance practices, and governance arrangements.
 }
 \keyword{datasets}
