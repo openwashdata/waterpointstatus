@@ -1,7 +1,7 @@
 
 bibentry(bibtype = "Misc",
          key = "mhango:2026",
-         title = "waterpointstatus: Water Point Functionality and Service Delivery Monitoring Dataset - 2023",
+         title = "waterpointstatus: Water Point Functionality and Service Monitoring, Malawi 2023",
          author = person(given = "Emmanuel",
                          family = "Mhango",
                          email = "emmanuellmhango@gmail.com",
@@ -9,6 +9,6 @@ bibentry(bibtype = "Misc",
          year = "2026",
          doi = "10.5281/zenodo.19498016",
          url = "https://github.com/openwashdata/waterpointstatus",
-         abstract = "This dataset contains structured field survey responses collected from water point inspections and interviews with community members or water point committee representatives. Each record represents a single survey event linked to a specific water point, including GPS coordinates, enumerator metadata, timestamps, and detailed observations on infrastructure condition, functionality, water availability, maintenance practices, and governance arrangements.",
+         abstract = "This dataset contains structured field survey responses collected from water point inspections and interviews with community members or water point committee representatives. Each record represents a single survey event linked to a specific water point, including GPS coordinates and detailed observations on infrastructure condition, functionality, water availability, maintenance practices, and governance arrangements.",
          keywords = "open data,washdata,water points,functionality,water supply,service delivery,Malawi,baseflow,boreholes,groundwater,wash,waterpoints",
          version = "1.0.0")
