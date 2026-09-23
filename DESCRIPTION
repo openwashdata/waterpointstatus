@@ -1,6 +1,6 @@
 Package: waterpointstatus
-Title: Water Point Functionality and Service Delivery Monitoring Dataset - 2023
-Version: v1.0.0
+Title: Water Point Functionality and Service Monitoring, Malawi 2023
+Version: 1.0.0
 Authors@R: c(
     person("Emmanuel", "Mhango", , "emmanuellmhango@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-3197-6244")),
@@ -17,7 +17,7 @@ Authors@R: c(
     person("Emmanuel", "Nkhonjera", role = "ctb"),
     person("Rodney", "Kananji", role = "ctb")
   )
-Description: This dataset contains structured field survey responses collected from water point inspections and interviews with community members or water point committee representatives. Each record represents a single survey event linked to a specific water point, including GPS coordinates, enumerator metadata, timestamps, and detailed observations on infrastructure condition, functionality, water availability, maintenance practices, and governance arrangements.
+Description: This dataset contains structured field survey responses collected from water point inspections and interviews with community members or water point committee representatives. Each record represents a single survey event linked to a specific water point, including GPS coordinates and detailed observations on infrastructure condition, functionality, water availability, maintenance practices, and governance arrangements.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -30,3 +30,6 @@ Config/Needs/website: rmarkdown
 Date: 2026-04-10
 URL: https://github.com/openwashdata/waterpointstatus
 BugReports: https://github.com/openwashdata/waterpointstatus/issues
+X-schema.org-keywords: open data, washdata, water points, functionality, water supply, service delivery, Malawi
+X-schema.org-spatialCoverage: Southern Region, Malawi
+X-schema.org-temporalCoverage: 2023-01-01/2023-12-31
