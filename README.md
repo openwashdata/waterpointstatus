@@ -10,6 +10,7 @@
 
 [![DOI](https://zenodo.org/badge/1206929194.svg)](https://doi.org/10.5281/zenodo.19498016)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19498016.svg)](https://zenodo.org/doi/10.5281/zenodo.19498016)
+[![R-CMD-check](https://github.com/openwashdata/waterpointstatus/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/waterpointstatus/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 This dataset contains water point assessment data collected during
