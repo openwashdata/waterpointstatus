@@ -4,8 +4,6 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19498016.svg)](https://zenodo.org/doi/10.5281/zenodo.19498016)
 [![R-CMD-check](https://github.com/openwashdata/waterpointstatus/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/waterpointstatus/actions/workflows/R-CMD-check.yaml)
 
-A data package published by [openwashdata](https://openwashdata.org).
-
 This dataset contains water point assessment data collected during
 routine field monitoring activities conducted in Malawi in 2023 under
 the Trocaire water point functionality survey program. The survey was
@@ -255,6 +253,8 @@ Data are available as
 [CC-BY](https://github.com/openwashdata/waterpointstatus/blob/main/LICENSE.md).
 
 ## Citation
+
+Published by openwashdata, <https://openwashdata.org>.
 
 Please cite this package using:
 
