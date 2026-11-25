@@ -94,7 +94,7 @@ library(waterpointstatus)
 
 ### metadata
 
-The dataset `waterpointstatus` contains 1425 observations and 45
+The dataset `waterpointstatus` contains 1365 observations and 45
 variables
 
 ``` r
@@ -108,8 +108,8 @@ waterpointstatus |>
 | waterpoint_id | latitude | longitude | waterpoint_image | functional_status | downtime_duration | abandon_reason | has_current_issue | current_issue | water_available_today | continuous_30days | no_water_30days_reason | repair_duration_days | seasonal_unavailable | seasonal_period | flow_test_possible | fill_time_20l | latrine_within_100m | observed_issues | water_quality_issues | preventive_maintenance | maintenance_barrier | user_population | universal_access | households_no_access | access_barrier | max_roundtrip_minutes | max_distance_metres | has_service_provider | provider_type | has_tariff | tariff_frequency | tariff_amount_mwk | tariff_cost_basis | has_financial_records | has_positive_balance | savings_or_loans | record_balance_mwk | has_bank_account | bank_balance_mwk | committee_year_formed | committee_member_count | committee_women_count | treasurer_gender | months_unavailable |
 |---:|---:|---:|:---|:---|:---|:---|:---|:---|:---|:---|:---|---:|:---|---:|:---|---:|:---|:---|:---|:---|:---|---:|---:|---:|:---|---:|---:|:---|:---|:---|:---|---:|:---|:---|:---|:---|---:|:---|---:|---:|---:|---:|:---|---:|
 | 243390968 | -16.31032 | 34.88356 | <https://api.mwater.co/v3/images/a40d5baecd634858b974289d071f79e1> | NA | NA | NA | NA | NA | NA | No | System is not functional | 0 | No | NA | NA | NA | Yes | Damage or problem with pump | NA | NA | NA | 0 | NA | NA | NA | 0 | 0 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 0 |
-| 13625083 | -16.44955 | 34.86430 | <https://api.mwater.co/v3/images/157b0a22c0294b9e97ded388a7b61333> | Not functional | Less than 1 month | NA | NA | NA | NA | NA | NA | NA | No | NA | NA | NA | Yes | Damage or problem with pump, Damage to civil works - platform, well head, riser etc, Other | NA | Sometimes | NA | 258 | 0 | NA | NA | 5 | 3 | Yes | Water Point Committee | Yes | Per month | 200 | Maintenance costs, Operation costs | No | NA | NA | NA | No | NA | 2015 | 10 | 6 | Female | 0 |
-| 12203015 | -16.44641 | 34.86387 | <https://api.mwater.co/v3/images/05c67273c9dd4b888692e5de0ecbcdc8> | Not functional | 2 - 5 years | NA | NA | NA | NA | NA | NA | NA | Yes | 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12 | NA | NA | Yes | Water quality, Other | Salinity / saltiness | No | Lack of money, Lack of understanding/commitment to Preventative Maintenance | NA | NA | NA | NA | NA | NA | No | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 12 |
+| 296153 | -16.48357 | 34.72799 | <https://api.mwater.co/v3/images/655469f1c519466ab7d2ce909e7b486d> | Partially functional but in need of repair | NA | NA | NA | NA | Yes | Yes | NA | NA | No | NA | Yes | 66.800 | No | Water quality, Damage to civil works - platform, well head, riser etc, Damage or problem with pump | Salinity / saltiness | Yes | NA | 257 | 0 | NA | NA | 30 | 5000 | Yes | Water Point Committee | No | NA | NA | NA | NA | NA | NA | NA | NA | NA | 2021 | 10 | 5 | Male | 0 |
+| 296225 | -16.49599 | 34.71660 | <https://api.mwater.co/v3/images/8d2317e8a4b54f929b28a2ff250e1b6a> | Partially functional but in need of repair | NA | NA | NA | NA | Yes | Yes | NA | NA | Yes | 10, 11, 09 | Yes | 82.201 | No | Damage to civil works - platform, well head, riser etc, Damage or problem with pump | NA | Yes | NA | 184 | 0 | NA | NA | 30 | 400 | Yes | Water Point Committee | No | NA | NA | NA | NA | NA | NA | NA | NA | NA | 2020 | 10 | 5 | Male | 3 |
 
 For an overview of the variable names, see the following table.
 
@@ -246,6 +246,8 @@ leaflet(wp_map) %>%
     title = "Water Point Status"
   )
 ```
+
+![](reference/figures/README-unnamed-chunk-7-1.png)
 
 ## License
 
